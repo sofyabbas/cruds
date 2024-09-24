@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>cruds</h1>
+            <p>mobile stores system</p>
+        </div>
+
+        <div class="inputs">
+            <input placeholder="Category" type="text" name="" id="title">
+            <div class="price">
+                <input  onkeyup="getTotal()" onchange="getTotal()" style="margin-left: 0 !important;" class="width-20percent" placeholder="price" type="number"
+                    name="" id="price">
+                <input  onkeyup="getTotal()" onchange="getTotal()" class="width-20percent" placeholder="Tax" type="number" name="" id="taxes">
+                <input onkeyup="getTotal()" onchange="getTotal()" class="width-20percent" placeholder="Ads" type="number" name="" id="ads">
+                <input onkeyup="getTotal()" onchange="getTotal()" class="width-20percent" placeholder="Discount" type="number" name="" id="discount">
+                <small id="total"></small>
+            </div>
+
+            <input placeholder="Count" type="number" name="" id="count">
+            <input placeholder="Category" type="text" name="" id="category">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="search-block">
+                <input onchange="searchData()" onkeyup="searchData()" placeholder="Search" type="text" id="search"></input>
+                <div class="btn-search">
+                    <label for="by-title">By Title: <input type="radio" name="search" id="by-title" checked></label>
+                    
+                    <label for="by-cat">By Catigory: <input type="radio" name="search" id="by-cat"></label>
+                    
+                    <!-- <button id="search-by-title">Search By Title</button>
+                    <button id="search-by-catigory">Search By Catigory</button> -->
+                </div>
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Count</th>
+                    <th>Catigory</th>
+                    <th>Upadte</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody">
+         
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
